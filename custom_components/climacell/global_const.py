@@ -61,6 +61,8 @@ ATTR_MOON_PHASE = "moon_phase"
 ATTR_WEATHER_GROUP = "weather_groups"
 ATTR_WEATHER_PRESSURE_SEALEVEL = "sealevel_pressure"
 ATTR_WEATHER_SOLAR_GHI = "solar_ghi"
+ATTR_WEATHER_SOLAR_DNI = "solar_dni"
+ATTR_WEATHER_SOLAR_DHI = "solar_dhi"
 
 ATTR_POLLEN_TREE = "pollen_tree"
 ATTR_POLLEN_WEED = "pollen_weed"
@@ -178,6 +180,16 @@ CLIMACELL_FIELDS = {
         ATTR_NAME: "Solar GHI",
         ATTR_ICON: "mdi:white-balance-sunny",
         ATTR_CONDITION: ATTR_WEATHER_SOLAR_GHI,
+    },
+    "solarDNI": {
+        ATTR_NAME: "Solar DNI",
+        ATTR_ICON: "mdi:white-balance-sunny",
+        ATTR_CONDITION: ATTR_WEATHER_SOLAR_DNI,
+    },
+    "solarDHI": {
+        ATTR_NAME: "Solar DHI",
+        ATTR_ICON: "mdi:white-balance-sunny",
+        ATTR_CONDITION: ATTR_WEATHER_SOLAR_DHI,
     },
     "visibility": {
         ATTR_NAME: "Visibility",
@@ -401,6 +413,8 @@ METRIC_UNITS = {
     "solarDIF": "W/m^2",
     "solarDIR": "W/m^2",
     "solarGHI": "W/m^2",
+    "solarDNI": "W/m^2",
+    "solarDHI": "W/m^2",
     "sunriseTime": "",
     "sunsetTime": "",
     "temperature": "Celcius",
@@ -720,6 +734,8 @@ IMPERIAL_UNITS = {
     "solarDIF": "Btu/ft^2",
     "solarDIR": "Btu/ft^2",
     "solarGHI": "Btu/ft^2",
+    "solarDNI": "Btu/ft^2",
+    "solarDHI": "Btu/ft^2",
     "temperature": "Fahrenheit",
     "temperatureApparent": "Fahrenheit",
     "treeAcacia": {
