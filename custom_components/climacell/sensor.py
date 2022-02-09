@@ -382,7 +382,7 @@ class ClimacellTimelineSensor(Entity):
         return self.__to_float(self._state)
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         attrs = {
             ATTR_ATTRIBUTION: ATTRIBUTION,
