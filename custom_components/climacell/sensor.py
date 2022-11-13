@@ -109,7 +109,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     if CONF_UNITS in config:
         units = config[CONF_UNITS]
-    elif hass.config.units.is_metric:
+    elif hass.config.units is METRIC_SYSTEM:
         units = CONF_ALLOWED_UNITS[0]
     else:
         units = CONF_ALLOWED_UNITS[1]
