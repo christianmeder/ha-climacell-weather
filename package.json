@@ -1,6 +1,6 @@
 {
   "name": "ha-climacell-weather",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "The Home Assistant custom component retrieve weather information using the climacell API. (https://www.climacell.co).",
   "keywords": [
     "home-assistant",

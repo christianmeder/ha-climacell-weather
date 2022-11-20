@@ -7,7 +7,7 @@ import pytz
 import voluptuous as vol
 
 from datetime import timedelta, datetime
-
+from homeassistant.util.unit_system import METRIC_SYSTEM
 from homeassistant.components.google_assistant import CONF_API_KEY
 from homeassistant.const import (
     CONF_LATITUDE,
