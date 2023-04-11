@@ -7,7 +7,7 @@ import pytz
 import voluptuous as vol
 
 from datetime import timedelta, datetime
-
+from homeassistant.util.unit_system import METRIC_SYSTEM
 from homeassistant.components.google_assistant import CONF_API_KEY
 from homeassistant.const import (
     CONF_LATITUDE,
@@ -109,7 +109,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     if CONF_UNITS in config:
         units = config[CONF_UNITS]
-    elif hass.config.units.is_metric:
+    elif hass.config.units is METRIC_SYSTEM:
         units = CONF_ALLOWED_UNITS[0]
     else:
         units = CONF_ALLOWED_UNITS[1]
@@ -382,7 +382,7 @@ class ClimacellTimelineSensor(Entity):
         return self.__to_float(self._state)
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         attrs = {
             ATTR_ATTRIBUTION: ATTRIBUTION,

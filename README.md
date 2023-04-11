@@ -34,6 +34,15 @@ The API version 3 authorization key don't work with the API version 4. If you us
 4. Download _all_ the files from this repository.
 5. Place the content of the `custom_components/climacell/` directory (folder) in the new directory (folder) you created.
 
+## HACS installation (recommended)
+
+1. Go to integrations
+2. Press the dotted menu in the top right corner
+3. Choose custom repositories
+4. Add the <b>URL</b> of this repository
+5. Choose category `Integration`
+6. Click add
+
 ## Configuration
 To use the `ClimaCell` custom component you must first obtain an <a href="https://www.climacell.co/weather-api/pricing/" target="_blank">v4 API key</a>. 
 
@@ -107,7 +116,7 @@ For mapped values (e.g. weatherCode) the prefix "Raw" will disable mapping.
 ```yaml
 sensor:
   # Weather climatecell.co
-  - platform: climacell
+  - platform: climacell_custom
     api_key: !secret climacell_api_key
     name: example
     latitude: !secret gps_geo_home_lt
